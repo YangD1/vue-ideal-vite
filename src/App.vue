@@ -1,31 +1,75 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { useDark, useToggle } from '@vueuse/core';
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+  <main px-16 py-40 text-center>
+    <i i-logos-unocss text-48 inline-block />
+    <p mt-15 text-20 font-bold color-gray-400>UnoCSS</p>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <p text-16 mt-15 inline-flex gap-10>
+      <i @click="toggleDark()" icon-btn dark:i-carbon-moon i-carbon-sun />
+      <a
+        icon-btn i-carbon-logo-github
+        href="https://github.com/zclzone"
+        target="_blank"
+        title="GitHub"
+      />
+    </p>
+
+    <section mt-20 w-360 mx-auto flex flex-wrap justify-around p-10 card-shadow rounded-10 dark:b >
+      <div w-50 h-50 b-1 rounded-5 f-c-c p-10 m-20>
+        <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+      </div>
+      <div w-50 h-50 b-1 rounded-5 flex justify-between p-10 m-20>
+        <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        <span w-6 h-6 rounded-3 self-end bg-black dark:bg-white />
+      </div>
+      <div w-50 h-50 b-1 rounded-5 flex justify-between p-10 m-20>
+        <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        <span w-6 h-6 rounded-3 self-center bg-black dark:bg-white />
+        <span w-6 h-6 rounded-3 self-end bg-black dark:bg-white />
+      </div>
+      <div w-50 h-50 b-1 rounded-5 flex justify-between p-10 m-20>
+        <div flex-col justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+        <div flex-col justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+      </div>
+      <div w-50 h-50 b-1 rounded-5 flex-col justify-between items-center p-10 m-20>
+        <div flex w-full justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+        <div w-6 h-6 rounded-3 bg-black dark:bg-white />
+        <div flex w-full justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+      </div>
+      <div w-50 h-50 b-1 rounded-5 flex-col justify-between p-10 m-20>
+        <div flex w-full justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+        <div flex w-full justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+        <div flex w-full justify-between>
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+          <span w-6 h-6 rounded-3 bg-black dark:bg-white />
+        </div>
+      </div>
+    </section>
+
+    <p mt-20 text-14 color-gray-400>Flex骰子</p>
+  </main>
+</template>
