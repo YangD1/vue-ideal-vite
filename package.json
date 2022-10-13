@@ -14,7 +14,8 @@
     "pinia": "^2.0.23",
     "reset": "link:unocss,@unocss/reset",
     "unocss": "^0.45.28",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/node": "^18.8.5",
