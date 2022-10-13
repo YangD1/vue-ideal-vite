@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import router from '@/router'
+import 'element-plus/theme-chalk/dark/css-vars.css'
+
 
 /** 重置样式 这里引入自定义的重置样式也可 */
 import '@unocss/reset/tailwind.css'
