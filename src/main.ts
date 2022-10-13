@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 /** 重置样式 这里引入自定义的重置样式也可 */
 import '@unocss/reset/tailwind.css'
@@ -11,5 +12,8 @@ import './style.css'
 import 'uno.css'
 
 import App from './App.vue'
+const pinia = createPinia()
+const app = createApp(App)
+app.use(pinia)
 
-createApp(App).mount('#app')
+app.mount('#app')

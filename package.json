@@ -2,7 +2,6 @@
   "name": "vue-ideal-vite",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -12,11 +11,13 @@
     "@iconify/json": "^2.1.119",
     "@unocss/reset": "^0.45.28",
     "@vueuse/core": "^9.3.0",
+    "pinia": "^2.0.23",
     "reset": "link:unocss,@unocss/reset",
     "unocss": "^0.45.28",
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@types/node": "^18.8.5",
     "@vitejs/plugin-vue": "^3.1.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
