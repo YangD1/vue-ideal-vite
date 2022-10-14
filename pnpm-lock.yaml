@@ -7,6 +7,7 @@ specifiers:
   '@vitejs/plugin-vue': ^3.1.0
   '@vueuse/core': ^9.3.0
   element-plus: ^2.2.18
+  husky: ^8.0.1
   pinia: ^2.0.23
   reset: link:unocss,@unocss/reset
   typescript: ^4.6.4
@@ -23,6 +24,7 @@ dependencies:
   '@unocss/reset': 0.45.28
   '@vueuse/core': 9.3.0_vue@3.2.40
   element-plus: 2.2.18_vue@3.2.40
+  husky: 8.0.1
   pinia: 2.0.23_bfjwoga25wxjazzogo7o372nwq
   reset: link:unocss,@unocss/reset
   unocss: 0.45.28_vite@3.1.6
@@ -960,6 +962,12 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: false
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: false
 
   /is-binary-path/2.1.0:

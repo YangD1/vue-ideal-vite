@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@iconify/json": "^2.1.119",
     "@unocss/reset": "^0.45.28",
     "@vueuse/core": "^9.3.0",
     "element-plus": "^2.2.18",
+    "husky": "^8.0.1",
     "pinia": "^2.0.23",
     "reset": "link:unocss,@unocss/reset",
     "unocss": "^0.45.28",

@@ -2,11 +2,9 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 
-// @ts-ignore
 const routesModules: any = import.meta.globEager('./modules/*.ts')
 const routesModuleKeys: Array<any> = Object.keys(routesModules)
 
-// @ts-ignore
 let routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -19,17 +17,15 @@ let routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "demo" */ '../views/AboutView.vue')
   }
 ]
 
-routesModuleKeys.forEach(item => {
-  routes.push(...routesModules[item].default)
+routesModuleKeys.forEach(key => {
+  routes.push(...routesModules[key].default)
 })
 
-console.log(routes)
 const router = createRouter({
-  // history: createWebHistory(process.env.BASE_URL),
   history: createWebHistory('/'),
   routes
 })

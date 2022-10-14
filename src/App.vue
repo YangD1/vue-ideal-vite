@@ -3,7 +3,7 @@ import { useDark, useToggle } from '@vueuse/core';
 import { useCounterStore } from '@/stores/counter'
 const countStore = useCounterStore()
 
-const addFuncOne = () => {
+const addFuncOne = <T>(value: T): void => {
   countStore.increment()
 }
 
@@ -18,6 +18,6 @@ const toggleDark = useToggle(isDark)
     <router-link to="/demo">Demo</router-link>
     <router-view />
     <button @click="addFuncOne">增加{{ countStore.count }}</button>
-    <p mt-20 text-14 color-gray-400>Flex骰子</p>
+    <p mt-20 text-14 color-gray-400>unocss</p>
   </main>
 </template>
