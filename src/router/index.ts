@@ -1,7 +1,13 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-const routes: Array<RouteRecordRaw> = [
+
+// @ts-ignore
+const routesModules: any = import.meta.globEager('./modules/*.ts')
+const routesModuleKeys: Array<any> = Object.keys(routesModules)
+
+// @ts-ignore
+let routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
@@ -17,6 +23,11 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
+routesModuleKeys.forEach(item => {
+  routes.push(...routesModules[item].default)
+})
+
+console.log(routes)
 const router = createRouter({
   // history: createWebHistory(process.env.BASE_URL),
   history: createWebHistory('/'),
